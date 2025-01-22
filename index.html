@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .body {
+            margin: 20;
+            padding: 20;
+            height: 100vh;
+            width: 100vw;  
+        }
+        @media (min-width: 768px) {
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 2px solid #1E1E1E;
+        }
+        .main {
+            display: grid;
+            grid-template-rows: repeat(10, 1fr);
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            padding: 20px;
+            background-image: url(svg/vector_linea.svg);
+            background-size: cover; /* Ajusta el tamaño del fondo */
+            background-position: center; /* Centra el fondo */
+            background-repeat: no-repeat; /* Evita repeticiones */
+            background-color: #5E84EC;
+        }
+        .info {
+            font-family: "Heebo", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal; 
+            font-size: 1vw;
+            align-items: left;
+            display: flex;
+        }
+        .titol {
+            font-family: "Heebo", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal; 
+            font-size: 3vw;
+            align-items: center;
+            display: flex;
+        }
+        .xarxes {
+            font-family: "Heebo", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal; 
+            font-size: 1vw;
+            align-items: right;
+            display: flex;
+        }
+        h1 {
+            font-family: "Abril Fatface", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 10vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h2 {
+            width: 15vw;
+            height: 15vw;
+            font-family: "Heebo", serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal; 
+            font-size: 2vw;
+            background-color: #D7FC6E;
+            border-radius: 50px;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            text-align: center;
+            display: flex;
+            padding: 20px;
+        }
+        #bloc1{
+            grid-column-start: 4;
+            grid-column-end: 7;
+            grid-row: 3;
+            justify-self: center;
+        }
+        #bloc2{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row: 7;       
+            justify-self: center;
+
+        }
+        #bloc3 {
+            grid-column-start: 4;
+            grid-column-end: 7;
+            grid-row-start: 9;
+            grid-row-end: 11;
+            justify-self: center;
+
+        }
+        #pràctica1 {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        #pràctica2 {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        #pràctica3 {
+            grid-column: 3;
+            grid-row: 2;
+        }
+        #pràctica4 {
+            grid-column: 2;
+            grid-row: 3;
+        }
+        #pràctica5 {
+            grid-column: 1;
+            grid-row: 4;
+        }
+        #pràctica6 {
+            grid-column: 3;
+            grid-row: 4;
+        }
+        #pràctica7 {
+            grid-column: 2;
+            grid-row: 5;
+        }
+        #pràctica8 {
+            grid-column: 5;
+            grid-row: 6;
+        }
+        #pràctica10 {
+            grid-column: 4;
+            grid-row: 7;
+        }
+        #pràctica11 {
+            grid-column: 6;
+            grid-row: 7;
+        }
+        #pràctica12 {
+            grid-column: 5;
+            grid-row: 8;
+        }
+        #pràctica13 {
+            grid-column: 1;
+            grid-row: 9;
+        }
+        #pràctica14 {
+            grid-column: 3;
+            grid-row: 9;
+        }
+        #pràctica15 {
+            grid-column: 2;
+            grid-row: 10;
+        }
+    }
+    @media (max-width: 768px) {
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 2px solid #1E1E1E;
+        }
+        .main {
+            display: grid;
+            grid-template-rows: repeat(9, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            background-image: url(svg/vector_linea.svg);
+            background-size: cover; /* Ajusta el tamaño del fondo */
+            background-position: center; /* Centra el fondo */
+            background-repeat: no-repeat; /* Evita repeticiones */
+            background-color: #5E84EC;
+        }
+        .info {
+            font-family: "Heebo", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal; 
+            font-size: 2.5vw;
+            align-items: left;
+            display: flex;
+        }
+        .titol {
+            font-family: "Heebo", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal; 
+            font-size: 4.5vw;
+            align-items: center;
+            text-align: center;
+            display: flex;
+        }
+        .xarxes {
+            font-family: "Heebo", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal; 
+            font-size: 2.5vw;
+            align-items: right;
+            text-align: right;
+            display: flex;
+        }
+        h1 {
+            font-family: "Abril Fatface", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 10vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h2 {
+            width: 15vw;
+            height: 15vw;
+            font-family: "Heebo", serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal; 
+            font-size: 2vw;
+            background-color: #D7FC6E;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-transform: uppercase;
+            display: flex;
+            padding: 20px;
+        }
+        #bloc1{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row: 1;
+            justify-self: center;
+        }
+        #bloc2{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row: 5;       
+            justify-self: center;
+
+        }
+        #bloc3 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 8;
+            justify-self: center;
+
+        }
+        #pràctica1 {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        #pràctica2 {
+            grid-column: 2;
+            grid-row: 2;
+        }
+        #pràctica3 {
+            grid-column: 3;
+            grid-row: 2;
+        }
+        #pràctica4 {
+            grid-column: 1;
+            grid-row: 3;
+        }
+        #pràctica5 {
+            grid-column: 2;
+            grid-row: 3;
+        }
+        #pràctica6 {
+            grid-column: 3;
+            grid-row: 3;
+        }
+        #pràctica7 {
+            grid-column: 2;
+            grid-row: 4;
+        }
+        #pràctica8 {
+            grid-column: 1;
+            grid-row: 6;
+        }
+        #pràctica10 {
+            grid-column: 2;
+            grid-row: 6;
+        }
+        #pràctica11 {
+            grid-column: 3;
+            grid-row: 6;
+        }
+        #pràctica12 {
+            grid-column: 2;
+            grid-row: 7;
+        }
+        #pràctica13 {
+            grid-column: 1;
+            grid-row: 9;
+        }
+        #pràctica14 {
+            grid-column: 2;
+            grid-row: 9;
+        }
+        #pràctica15 {
+            grid-column: 3;
+            grid-row: 9;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="info">paula pomares moreno<br>2024/2025</div>
+        <div class="titol">SISTEMES DE REPRESENTACIÓ</div>
+        <div class="xarxes"><a href="https://www.instagram.com/_paulaa21/" target="_blank" style="color: black ; text-decoration: none;">@_paulaa21</a><a href="https://github.com/paulaapm" target="_blank" style="color: black ; text-decoration: none";><br>@paulaapm</a></div>
+    </div>
+
+    <div class="main">
+        <h1 id="bloc1">bloc 1</h1>
+        <h1 id="bloc2">bloc 2</h1>
+        <h1 id="bloc3">bloc 3</h1>
+
+        <h2 id="pràctica1"><a href="https://paulaapm.github.io/2DG_p1/" target="_blank" style="color: #1E1E1E; text-decoration: none;">pràctica 1</a></h2>
+        <h2 id="pràctica2"><a href="https://paulaapm.github.io/2DG_p2/" target="_blank" style="color:  #1E1E1E; text-decoration: none;">pràctica 2</a></h2>
+        <h2 id="pràctica3"><a href="https://paulaapm.github.io/2DG_p3/" target="_blank" style="color:  #1E1E1E; text-decoration: none;">pràctica 3</a></h2>
+        <h2 id="pràctica4"><a href="https://paulaapm.github.io/2DG_p4/" target="_blank" style="color:  #1E1E1E; text-decoration: none;">pràctica 4</a></h2>
+        <h2 id="pràctica5"><a href="https://www.figma.com/design/fTvvlwUhzX1qGtsAsT7KfR/p3?node-id=8-3&t=luO4hKBNPyHus4KO-1" target="_blank" style="color:  #1E1E1E; text-decoration: none;">pràctica 5</a></h2>
+        <h2 id="pràctica6"><a href="https://paulaapm.github.io/2DG_p6/" target="_blank" style="color:  #1E1E1E; text-decoration: none;">pràctica 6</a></h2>
+        <h2 id="pràctica7"><a href="https://paulaapm.github.io/2DG_p7/" target="_blank" style="color:  #1E1E1E; text-decoration: none;">pràctica 7</a></h2>
+        <h2 id="pràctica8"><a href="https://paulaapm.github.io/2DG_p8/" target="_blank" style="color:  #1E1E1E; text-decoration: none;">pràctica 8</a></h2>
+        <h2 id="pràctica10"><a href="https://www.figma.com/design/fTvvlwUhzX1qGtsAsT7KfR/p3?node-id=8-2&t=ViI5FSlr1iPOfjOl-1" target="_blank" style="color:  #1E1E1E; text-decoration: none;">pràctica 10</a></h2>
+        <h2 id="pràctica11"><a href="https://www.figma.com/design/fTvvlwUhzX1qGtsAsT7KfR/p3?node-id=165-13&t=lQ2ulaLOFXatqKHL-1" target="_blank" style="color:  #1E1E1E; text-decoration: none;">pràctica 11</a></h2>
+        <h2 id="pràctica12"><a href="https://paulaapm.github.io/2DG_p12/" target="_blank" style="color:  #1E1E1E; text-decoration: none;">pràctica 12</a></h2>
+        <h2 id="pràctica13"><a href="https://paulaapm.github.io/2DG_p13/" target="_blank" style="color:  #1E1E1E; text-decoration: none;">pràctica 13</a></h2>
+        <h2 id="pràctica14"><a href="https://paulaapm.github.io/2DG_p14/" target="_blank" style="color:  #1E1E1E; text-decoration: none;">pràctica 14</a></h2>
+        <h2 id="pràctica15"><a href="https://paulaapm.github.io/2DG_p15/" target="_blank" style="color:  #1E1E1E; text-decoration: none;">pràctica 15</a></h2>
+    </div>
+</body>
+</html>
